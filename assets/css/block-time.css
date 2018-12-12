@@ -1,0 +1,38 @@
+.block-time {
+    text-align: center;
+    position: relative;
+}
+
+.block-time > .content-summary, .block-time > .content-detail, .block-time > .content-time {
+    float: left;
+}
+
+.block-time > .content-summary, .block-time > .content-detail {
+    padding: 20px 0;
+}
+
+.block-time > .content-time {
+    border: 7px solid #bfcfda;
+    border-radius: 50%;
+    padding: 15px 0;
+    width: max-content;
+    color: #f1f1f1;
+    position: absolute;
+    z-index: 1000;
+    background-color: #aec785;
+    transition: transform 1s;
+    -o-transition: -o-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -webkit-transition: -webkit-transform 1s;
+}
+
+.block-time .title {
+    text-transform: none;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+}
+
+.block-time .title-arc {
+    color: #6c757d;
+    margin-bottom: 0;
+}
