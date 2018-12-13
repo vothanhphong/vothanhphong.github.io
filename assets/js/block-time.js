@@ -36,9 +36,9 @@ function reponsiveContentTime() {
             contentDetail  = $(this).find('.content-detail');
 
         if ($(contentTime).height() > $(contentTime).width()) {
-            $(contentTime).css('width', $(contentTime).height() + 'px');
+            $(contentTime).css('width', $(contentTime).css('height'));
         } else {
-            $(contentTime).css('height', $(contentTime).width() + 'px');
+            $(contentTime).css('height', $(contentTime).css('width'));
         }
 
         let blockWidth       = $(this).width(),
