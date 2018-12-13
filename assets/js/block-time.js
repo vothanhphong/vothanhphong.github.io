@@ -28,7 +28,7 @@ function reponsiveContentTime() {
             contentSummary = $(this).find('.content-summary'),
             contentDetail  = $(this).find('.content-detail');
 
-        $(contentTime).css('width', $(contentTime).css('height'));
+        $(contentTime).css('width', $(contentTime).height());
 
         let blockWidth       = $(this).width(),
             blockHeight      = $(this).height(),
