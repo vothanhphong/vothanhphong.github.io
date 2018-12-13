@@ -1,8 +1,15 @@
-let block = $('.block-time');
+let block        = $('.block-time'),
+    currentWidth = $(window).width();
 
 reponsiveContentTime();
 $(window).resize(function () {
-    reponsiveContentTime();
+    if ((currentWidth > 991 && $(window).width() < 992) ||
+        currentWidth < 993 && $(window).width() > 992
+    ) {
+        reponsiveContentTime();
+    }
+
+    currentWidth = $(window).width();
 });
 
 // Hover effect
@@ -28,7 +35,11 @@ function reponsiveContentTime() {
             contentSummary = $(this).find('.content-summary'),
             contentDetail  = $(this).find('.content-detail');
 
-        $(contentTime).css('width', $(contentTime).height());
+        if ($(contentTime).height() > $(contentTime).width()) {
+            $(contentTime).css('width', $(contentTime).height() + 'px');
+        } else {
+            $(contentTime).css('height', $(contentTime).width() + 'px');
+        }
 
         let blockWidth       = $(this).width(),
             blockHeight      = $(this).height(),
@@ -43,7 +54,9 @@ function reponsiveContentTime() {
         if ($(window).width() < 992) {
             $(contentTime).css({
                 position     : 'static',
-                'margin-left': left + 'px'
+                'margin-left': left + 'px',
+                left         : '',
+                top          : ''
             });
         } else {
             $(contentSummary).css({
@@ -56,10 +69,10 @@ function reponsiveContentTime() {
             });
             $(contentTime).css({
                 position     : 'absolute',
-                'margin-left': 'auto',
-                left         : (summaryWidth - timeWidth / 2 + blockPaddingLeft) + 'px'
+                'margin-left': '',
+                left         : (summaryWidth - timeWidth / 2 + blockPaddingLeft) + 'px',
+                top          : middle + 'px'
             });
-            $(contentTime).css({top: middle + 'px'});
         }
     });
 }
