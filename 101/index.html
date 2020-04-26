@@ -10,6 +10,7 @@
 body{
     background: url('https://wallpaperplay.com/walls/full/d/c/6/3088.jpg');
 	background-size: cover;
+	overflow: hidden;
 }
 #texttyping{
     width: 50%;
@@ -28,25 +29,26 @@ body{
     z-index: 10;
     float: left;
 }
+
 </style>
 <script type="text/javascript" src="js/html5_audio_visualizer.js"></script>
 <script language="javascript"> 
 mensaje= 
  
-'<font size="5" face="Courier New" color="#518df5">Ha lâu VỢ đáng yêu xinh đẹp của anh . . .  Anh Yêu Em ^^<br></font>'+' <br>'+ 
+'<font size="5" face="Courier New" color="#68def2">Ha lâu VỢ đáng yêu xinh đẹp của anh . . .  Anh Yêu Em ^^<br></font>'+' <br>'+ 
  
-'<font color="#518df5" size="6">Một không một nằm trên đường hội tụ</font><br>'+
-'<font color="#518df5" size="6">Ta sải bước với bước sóng lam đa</font><br>'+
-'<font color="#518df5" size="6">Trái tim anh vốn dao động điều hòa</font><br>'+
-'<font color="#518df5" size="6">Dao động đều theo cơn gió thoáng qua</font><br>'+
-'<font color="#518df5" size="6">Em nhao tời làm lệch pha dao động</font><br>'+
-'<font color="#518df5" size="6">Đạp anh vào khoảng từ trường rất rộng</font><br>'+
-'<font color="#518df5" size="6">Em như thể một dòng điện lệch pha</font><br>'+
-'<font color="#518df5" size="6">Mang năng lượng đến ngọn đèn mất điện</font><br>'+
-'<font color="#518df5" size="6">Giúp anh thoát khỏi một trình vô nghiệm</font><br>'+
-'<font color="#518df5" size="6">Trái tim này có vẻ đang tỏa nhiệt</font><br>'+
-'<font color="#518df5" size="6">Từ sóng lòng dao động and đã biết</font><br>'+
-'<font color="#518df5" size="6">Trái tim đang dao động cùng pha</font><br><br><br>'+
+'<font color="#68def2" size="6">Một không một nằm trên đường hội tụ</font><br>'+
+'<font color="#68def2" size="6">Ta sải bước với bước sóng lam đa</font><br>'+
+'<font color="#68def2" size="6">Trái tim anh vốn dao động điều hòa</font><br>'+
+'<font color="#68def2" size="6">Dao động đều theo cơn gió thoáng qua</font><br>'+
+'<font color="#68def2" size="6">Em nhao tời làm lệch pha dao động</font><br>'+
+'<font color="#68def2" size="6">Đạp anh vào khoảng từ trường rất rộng</font><br>'+
+'<font color="#68def2" size="6">Em như thể một dòng điện lệch pha</font><br>'+
+'<font color="#68def2" size="6">Mang năng lượng đến ngọn đèn mất điện</font><br>'+
+'<font color="#68def2" size="6">Giúp anh thoát khỏi một trình vô nghiệm</font><br>'+
+'<font color="#68def2" size="6">Trái tim này có vẻ đang tỏa nhiệt</font><br>'+
+'<font color="#68def2" size="6">Từ sóng lòng dao động and đã biết</font><br>'+
+'<font color="#68def2" size="6">Trái tim đang dao động cùng pha</font><br><br><br>'+
  
 '<font size="4"  color="#dbe8ff">Vô Thanh Phong.</font><br>';
  
@@ -172,8 +174,8 @@ function movesnow() {
 }
  
 for (i=0;i<16;i++) {
-	document.write("<span id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
-	document.write("<span id='s"+(i + 16)+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter2+"</span>")
+	document.write("<span class='text-run' id='s"+i+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter+"</span>")
+	document.write("<span class='text-run' id='s"+(i + 16)+"' style='position:absolute;top:-"+snowmaxsize+"'>"+snowletter2+"</span>")
 }
 if (browserok) {
 	window.onload=initsnow;
